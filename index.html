@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Портфолио</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="background-layer">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+	<div class="blob blob-4"></div>
+    <img src="lines.svg" class="bg-lines" alt="">
+</div>
+
+<div class="content">
+
+<nav class="navbar fixed-top custom-nav">
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <a href="#experience" class="nav-link-custom">опыт</a>
+        <a href="#skills" class="nav-link-custom">навыки</a>
+
+        <div class="logo-scroll" id="scrollTopBtn">
+            ⬆
+        </div>
+
+        <a href="#projects" class="nav-link-custom">проекты</a>
+        <a href="#contact" class="nav-link-custom">связь</a>
+
+    </div>
+</nav>
+
+<section id="hero" class="section hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+                <h1 class="hero-title">Мира Ренар</h1>
+                <p class="hero-text">
+                    Дизайнер смешанных сфер, соединяющий продуманный
+                    цифровой дизайн, смысленную эстетику и смысл.
+                    Я верю, что дизайн должен ощущаться не требующим усилий
+                    и человечным.
+                </p>
+                <button class="btn-custom">связаться со мной</button>
+            </div>
+
+            <div class="col-lg-6 d-flex justify-content-center">
+                <div class="hero-card">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="section">
+    <div class="container">
+        <h2 class="section-title">Опыт</h2>
+    </div>
+</section>
+
+<section id="skills" class="section">
+    <div class="container">
+        <h2 class="section-title">Навыки</h2>
+    </div>
+</section>
+
+<section id="education" class="section">
+    <div class="container">
+        <h2 class="section-title">Образование</h2>
+
+        <div class="glass education-card p-4">
+            Контент образования
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="section-title">Проекты</h2>
+    </div>
+</section>
+
+<section id="contact" class="section contact-section">
+	<div class="container">
+	<h2 class="section-title text-center">Готова к сотрудничеству</h2>
+	<div class="row justify-content-center">
+	<div class="col-lg-6">
+	<form id="contactForm" class="glass contact-form">
+	<div class="mb-4">
+	<label class="form-label">Ваше имя</label>
+	<input
+	type="text"
+	class="form-control custom-input"
+	name="name"
+	placeholder="Введите имя"
+	required
+	>
+	</div>
+	<div class="mb-4">
+	<label class="form-label">Email</label>
+	<input
+	type="email"
+	class="form-control custom-input"
+	name="email"
+	placeholder="your@email.com"
+	required
+	>
+	</div>
+	<div class="mb-4">
+	<label class="form-label">Сообщение</label>
+	<textarea
+	class="form-control custom-input"
+	name="message"
+	rows="5"
+	placeholder="Расскажите о вашем проекте"
+	required
+	></textarea>
+
+	</div>
+
+	<button type="submit" class="btn-custom w-100">
+	Отправить сообщение
+	</button>
+
+	<div class="form-status mt-3"></div>
+
+	</form>
+
+	</div>
+	</div>
+	</div>
+
+</section>
+
+
+<footer class="footer text-center py-4">
+    © 2026
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
