@@ -69,6 +69,7 @@ blobs.forEach((blob, index) => {
 
 const form = document.getElementById("contactForm");
 const statusBlock = document.querySelector(".form-status");
+const API_BASE_URL = "https://feedbacktestlol.onrender.com";
 
 form.addEventListener("submit", async function(e){
 
@@ -86,7 +87,7 @@ statusBlock.textContent = "Отправка...";
 
 try{
 
-const response = await fetch("/api/contact",{
+const response = await fetch(`${API_BASE_URL}/api/feedback`,{
 method:"POST",
 headers:{
 "Content-Type":"application/json"

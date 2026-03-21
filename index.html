@@ -391,24 +391,25 @@ behance.net/username
 
 <div class="col-md-6 mb-4">
 <label class="form-label">Имя</label>
-<input type="text" class="form-control custom-input" placeholder="Введите имя">
+<input type="text" name="name" class="form-control custom-input" placeholder="Введите имя" required>
 </div>
 
 <div class="col-md-6 mb-4">
 <label class="form-label">Email</label>
-<input type="email" class="form-control custom-input" placeholder="email@example.com">
+<input type="email" name="email" class="form-control custom-input" placeholder="email@example.com" required>
 </div>
 
 </div>
 
 <div class="mb-4">
 <label class="form-label">Сообщение</label>
-<textarea class="form-control custom-input" rows="5" placeholder="Расскажите о вашем проекте"></textarea>
+<textarea name="message" class="form-control custom-input" rows="5" placeholder="Расскажите о вашем проекте" required></textarea>
 </div>
 
 <button class="btn-custom w-100">
 Отправить сообщение
 </button>
+<div class="form-status mt-3"></div>
 
 </form>
 
