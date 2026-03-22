@@ -11,24 +11,39 @@ body {
 }
 
 .section-title {
-    font-size: 36px;
-    margin-bottom: 60px;
+    font-size: 32px;
+    margin-bottom: 40px;
 }
 
 .custom-nav {
+	transition:0.4s;
+	position:sticky;
+	top:0;
+	z-index:1000;
     background: transparent;
     padding: 20px 0;
 }
 
-.nav-link-custom {
-    text-decoration: none;
-    color: #7E72B5;
-    font-weight: 500;
-    transition: 0.3s;
+.nav-link-custom{
+	text-decoration:none;
+	color:white;
+	font-size:17px;
+	letter-spacing:1px;
+
+	background:#B6A8E5;
+	padding:0 16px;
+	height:40px;
+	border-radius:12px;
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+
+	transition:0.3s;
 }
 
-.nav-link-custom:hover {
-    opacity: 0.7;
+.nav-link-custom:hover{
+	background:#B6A8E5;
+	transform:translateY(-2px);
 }
 
 .logo-scroll{
@@ -44,9 +59,10 @@ body {
 }
 
 .logo-scroll img{
+	align-items: center;
 	margin-top: 6px;
-	width:40px;
-	height:34px;
+	width:auto;
+	height:30px;
 	filter:brightness(0) invert(1);
 	transition:0.3s;
 }
@@ -131,9 +147,12 @@ height:420px;
 .btn-custom{
 	background:#B6A8E5;
 	border:none;
-	padding:10px 26px;   
+	padding:8px 24px;
 	border-radius:12px;
 	color:white;
+	font-size:17px;
+	letter-spacing:0.5px;
+	height:40px;
 	display:inline-flex;
 	align-items:center;
 	justify-content:center;
@@ -143,6 +162,21 @@ height:420px;
 
 .btn-custom:hover {
     transform: translateY(-3px);
+}
+
+.contact-form .form-label,
+.contact-form .custom-input {
+	font-size: 14px;
+}
+
+.contact-form .custom-input {
+	padding: 10px 12px;
+	border-radius: 10px;
+}
+
+.contact-form textarea.custom-input {
+	font-size: 13px;
+	line-height: 1.4;
 }
 
 
@@ -204,11 +238,29 @@ height:420px;
 	opacity: 0.5;
 }
 
-.bg-lines {
-    position: absolute;
-    width: 120%;
-    opacity: 1;
-    pointer-events: none;
+.bg-line{
+position:absolute;
+pointer-events:none;
+z-index:-1;
+opacity:0.6;
+}
+
+.lines-1{
+top: -180px;;
+left:0;
+width:100%;
+}
+
+.lines-2{
+top: 1100px;
+left:0;
+width:100%;
+}
+
+.lines-3{
+bottom:1000px;
+left:0;
+width:100%;
 }
 
 .experience-wrapper{
@@ -236,6 +288,7 @@ height:420px;
 	max-width:520px;
 	opacity:0.85;
 	line-height:1.6;
+	font-size:21px;
 }
 
 @media (max-width:768px){
@@ -250,7 +303,7 @@ height:420px;
 }
 
 .experience-title{
-	font-size:18px;
+	font-size:1px;
 }
 
 }
@@ -452,9 +505,12 @@ height:420px;
 }
 
 .contact-subtitle{
-	max-width:520px;
-	margin:20px auto 0 auto;
-	opacity:0.7;
+	max-width:750px;
+	margin:1px auto 0;
+	text-align:center;
+	line-height:1.6;
+	opacity:0.75;
+	font-size: 21px;
 }
 
 
@@ -480,12 +536,12 @@ height:420px;
 }
 
 .form-label {
-	font-size: 14px;
+	font-size: 16px;
 	margin-bottom: 6px;
 	opacity: 0.8;
 }
 
 .form-status {
-	font-size: 14px;
+	font-size: 16px;
 	text-align: center;
 }

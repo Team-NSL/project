@@ -53,7 +53,6 @@ blobs.forEach((blob, index) => {
         posX += velocityX;
         posY += velocityY;
 
-        // Границы всей страницы
         if (posX < -300 || posX > getPageWidth() + 300) velocityX *= -1;
         if (posY < -300 || posY > getPageHeight() + 300) velocityY *= -1;
 
@@ -137,4 +136,20 @@ slides[index].classList.add("active");
 
 }, 3000);
 
+});
+
+
+let lastScroll = 0;
+const nav = document.querySelector(".custom-nav");
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 100) {
+        nav.style.transform = "translateY(-100%)";
+    } else {
+        nav.style.transform = "translateY(0)";
+    }
+
+    lastScroll = currentScroll;
 });
