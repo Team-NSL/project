@@ -10,6 +10,7 @@
         margin: 40px;
         max-width: 720px;
       }
+      a { color: #0d6efd; }
       label {
         display: block;
         margin-top: 12px;
@@ -34,6 +35,7 @@
     </style>
   </head>
   <body>
+    <p><a href="/">Все обращения</a></p>
     <h1>Обратная связь</h1>
 
     <form id="feedbackForm">
@@ -76,15 +78,16 @@
           const data = await resp.json();
           if (!resp.ok || !data.ok) {
             statusEl.textContent =
-              "Ошибка отправки: " + (data.error || "unknown") + "\\n" + JSON.stringify(data.details || {}, null, 2);
+              "Ошибка отправки: " + (data.error || "unknown") + "\n" + JSON.stringify(data.details || {}, null, 2);
             return;
           }
 
           statusEl.textContent =
-            "Спасибо! Сообщение сохранено в базе.\\nfeedbackId: " +
+            "Спасибо! Сообщение сохранено.\nfeedbackId: " +
             data.feedbackId +
-            "\\nTelegram sent: " +
+            "\nTelegram sent: " +
             data.telegramSent;
+          window.location.href = "/";
         } catch (err) {
           statusEl.textContent = "Ошибка сети: " + String(err);
         }
@@ -92,4 +95,3 @@
     </script>
   </body>
 </html>
-
