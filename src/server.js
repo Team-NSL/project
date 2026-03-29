@@ -6,7 +6,6 @@ const prisma = require("./prisma");
 const PORT = process.env.PORT ? Number(process.env.PORT) : 3000;
 
 async function start() {
-  // Connect early so deployment fails fast if DB is misconfigured.
   await prisma.$connect();
 
   app.listen(PORT, () => {

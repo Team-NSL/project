@@ -2,7 +2,6 @@ const prisma = require("../prisma");
 const { sendTelegramMessage } = require("./telegram");
 
 function buildTelegramText({ name, email, message }) {
-  // Все в одном блоке, без форматирования.
   return [
     "Новая заявка обратной связи",
     `Имя: ${name}`,

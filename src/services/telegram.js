@@ -10,7 +10,6 @@ async function sendTelegramMessage({ text }) {
   const TELEGRAM_BOT_TOKEN = requireEnv("TELEGRAM_BOT_TOKEN");
   const TELEGRAM_CHAT_ID = requireEnv("TELEGRAM_CHAT_ID");
 
-  // Node.js 18+ has global fetch. Railway typically uses a modern Node version.
   const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
 
   const resp = await fetch(url, {
