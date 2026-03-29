@@ -13,9 +13,14 @@ model Feedback {
   email               String
   message             String
   createdAt           DateTime @default(now())
-
-  telegramStatus      String  @default("pending")
+  telegramStatus      TelegramStatus @default(PENDING)
   telegramMessageId  String?
   telegramError       String?
+}
+
+enum TelegramStatus {
+  PENDING
+  SENT
+  FAILED
 }
 

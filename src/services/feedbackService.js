@@ -17,7 +17,7 @@ async function createFeedbackAndNotify({ name, email, message }) {
       name,
       email,
       message,
-      telegramStatus: "pending",
+      telegramStatus: "PENDING",
     },
   });
 
@@ -28,7 +28,7 @@ async function createFeedbackAndNotify({ name, email, message }) {
     await prisma.feedback.update({
       where: { id: created.id },
       data: {
-        telegramStatus: "sent",
+        telegramStatus: "SENT",
         telegramMessageId: tg.messageId ? String(tg.messageId) : null,
         telegramError: null,
       },
@@ -39,7 +39,7 @@ async function createFeedbackAndNotify({ name, email, message }) {
     await prisma.feedback.update({
       where: { id: created.id },
       data: {
-        telegramStatus: "failed",
+        telegramStatus: "FAILED",
         telegramError: telegramError.slice(0, 2000),
       },
     });
